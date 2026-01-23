@@ -5,25 +5,29 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float velocidade = 10f;
-    public float focaPulo = 10f;
+    public float forcaPulo = 10f;
 
     public bool noChao = false;
-
+    public bool andando = false;
 
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
 
-    // Start is called before the first frame update
+
+    private bool atacando = false;
+    private bool curando = false;
+
     void Start()
     {
-        _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
     }
-
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "chao")
+        if (collision.gameObject.CompareTag("chao"))
         {
             noChao = true;
         }
@@ -31,41 +35,82 @@ public class Player : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "chao")
+        if (collision.gameObject.CompareTag("chao"))
         {
             noChao = false;
         }
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        andando = false;
+
+
+        if (!atacando && !curando)
+        {
+            Movimento();
+            Pulo();
+        }
+
+        Ataque();
+        Cura();
+
+        _animator.SetBool("Andando", andando);
+    }
+
+    void Movimento()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.position += new Vector3(-velocidade * Time.deltaTime, 0, 0);
-            //rigidbody2D.AddForce(new Vector2(-velocidade,0));
-            spriteRenderer.flipX = true;
-            Debug.Log("A");
-        }
+            transform.position += Vector3.left * velocidade * Time.deltaTime;
+            _spriteRenderer.flipX = true;
 
+            if (noChao) andando = true;
+        }
 
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.position += new Vector3(velocidade * Time.deltaTime, 0, 0);
-            //rigidbody2D.AddForce(new Vector2(velocidade,0));
-            spriteRenderer.flipX = false;
-            Debug.Log("D");
-        }
+            transform.position += Vector3.right * velocidade * Time.deltaTime;
+            _spriteRenderer.flipX = false;
 
-        if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
+            if (noChao) andando = true;
+        }
+    }
+
+    void Pulo()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && noChao)
         {
-            _rigidbody2D.AddForce(new Vector2(0, 1) * focaPulo, ForceMode2D.Impulse);
-
-            Debug.Log("Jump");
+            _rigidbody2D.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
         }
+    }
+
+    void Ataque()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && !atacando)
+        {
+            atacando = true;
+            _animator.SetTrigger("Atacar");
+        }
+    }
+
+    void Cura()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && !curando)
+        {
+            curando = true;
+            _animator.SetTrigger("Curar");
+        }
+    }
 
 
+    public void FimAtaque()
+    {
+        atacando = false;
+    }
 
-
+    public void FimCura()
+    {
+        curando = false;
     }
 }

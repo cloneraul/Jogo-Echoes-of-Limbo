@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 969255746}
   - component: {fileID: 969255745}
-  - component: {fileID: 969255743}
+  - component: {fileID: 969255749}
   - component: {fileID: 969255742}
   - component: {fileID: 969255747}
   - component: {fileID: 969255748}
@@ -301,22 +301,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &969255743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969255741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c8b1e6d9fc32347b5ae2dab0b36883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidade: 10
-  forcaPulo: 10
-  noChao: 0
-  andando: 0
 --- !u!212 &969255745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -381,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 969255741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.952174, y: -0.584808, z: 0}
+  m_LocalPosition: {x: -8.22, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,6 +439,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.77, y: 1.97}
   m_EdgeRadius: 0
+--- !u!114 &969255749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969255741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80edac0ea77794a499552430cbf4cacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 10
+  forcaPulo: 10
+  noChao: 0
+  andando: 0
 --- !u!1 &1027651171
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,8 +665,8 @@ Transform:
   m_GameObject: {fileID: 1624129392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7191038, y: 1.4409537, z: 0}
-  m_LocalScale: {x: 3.1429, y: 2.7241, z: 1}
+  m_LocalPosition: {x: -1.21, y: 6.89, z: 0}
+  m_LocalScale: {x: 3.1429, y: 2.7241, z: -2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

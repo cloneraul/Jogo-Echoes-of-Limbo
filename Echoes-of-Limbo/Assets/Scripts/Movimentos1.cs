@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
 
-
     private bool atacando = false;
     private bool curando = false;
 
@@ -45,7 +44,6 @@ public class Player : MonoBehaviour
     {
         andando = false;
 
-
         if (!atacando && !curando)
         {
             Movimento();
@@ -55,25 +53,23 @@ public class Player : MonoBehaviour
         Ataque();
         Cura();
 
+        
         _animator.SetBool("Andando", andando);
+        _animator.SetBool("Pulando", !noChao); 
     }
 
     void Movimento()
     {
-        if (Input.GetKey(KeyCode.A))
+        float move = Input.GetAxisRaw("Horizontal");
+
+        _rigidbody2D.linearVelocity = new Vector2(move * velocidade, _rigidbody2D.linearVelocity.y);
+
+        if (move != 0)
         {
-            transform.position += Vector3.left * velocidade * Time.deltaTime;
-            _spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = move < 0;
 
-            if (noChao) andando = true;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += Vector3.right * velocidade * Time.deltaTime;
-            _spriteRenderer.flipX = false;
-
-            if (noChao) andando = true;
+            if (noChao)
+                andando = true;
         }
     }
 
@@ -82,6 +78,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
         {
             _rigidbody2D.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
+            noChao = false; 
         }
     }
 
@@ -103,6 +100,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    
 
     public void FimAtaque()
     {

@@ -27,17 +27,13 @@ public class Player : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("chao"))
-        {
             noChao = true;
-        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("chao"))
-        {
             noChao = false;
-        }
     }
 
     void Update()
@@ -53,9 +49,8 @@ public class Player : MonoBehaviour
         Ataque();
         Cura();
 
-        
         _animator.SetBool("Andando", andando);
-        _animator.SetBool("Pulando", !noChao); 
+        _animator.SetBool("Pulando", !noChao);
     }
 
     void Movimento()
@@ -78,13 +73,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
         {
             _rigidbody2D.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
-            noChao = false; 
+            noChao = false;
         }
     }
 
     void Ataque()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !atacando)
+        if (Input.GetKeyDown(KeyCode.Z) && !atacando && noChao)
         {
             atacando = true;
             _animator.SetTrigger("Atacar");
@@ -99,8 +94,6 @@ public class Player : MonoBehaviour
             _animator.SetTrigger("Curar");
         }
     }
-
-    
 
     public void FimAtaque()
     {

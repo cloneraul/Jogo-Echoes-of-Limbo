@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55e4172f85d1ea841b241417a2179c6e
+guid: cd412ebb575c9794d8d583f4c5a70b3a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -129,9 +129,9 @@ TextureImporter:
       name: personagemjogorun8_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 24
         y: 19
-        width: 82
+        width: 77
         height: 187
       alignment: 0
       pivot: {x: 0, y: 0}

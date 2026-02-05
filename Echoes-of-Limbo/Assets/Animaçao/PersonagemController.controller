@@ -14,16 +14,16 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8124084465431752387}
-    m_Position: {x: -160, y: 340, z: 0}
+    m_Position: {x: -170, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5954915326521273781}
-    m_Position: {x: 190, y: 340, z: 0}
+    m_Position: {x: 60, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2244696077623376488}
-    m_Position: {x: -210, y: 200, z: 0}
+    m_Position: {x: 250, y: 190, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -1726731838983861262}
-    m_Position: {x: 335, y: 265, z: 0}
+    m_State: {fileID: -3203643200092136591}
+    m_Position: {x: 285, y: 255, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -169,14 +169,14 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &-1726731838983861262
+--- !u!1102 &-3203643200092136591
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cure
+  m_Name: Cura
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -189,7 +189,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e45820515ecfbcc4f829e4002dcd1293, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2d87326c579055a43bdd403afbb460ee, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

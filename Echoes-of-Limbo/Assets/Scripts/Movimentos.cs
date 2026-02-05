@@ -57,7 +57,10 @@ public class Player : MonoBehaviour
     {
         float move = Input.GetAxisRaw("Horizontal");
 
-        _rigidbody2D.linearVelocity = new Vector2(move * velocidade, _rigidbody2D.linearVelocity.y);
+        _rigidbody2D.linearVelocity = new Vector2(
+            move * velocidade,
+            _rigidbody2D.linearVelocity.y
+        );
 
         if (move != 0)
         {
@@ -72,7 +75,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
         {
-            _rigidbody2D.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
+            _rigidbody2D.AddForce(
+                Vector2.up * forcaPulo,
+                ForceMode2D.Impulse
+            );
+
             noChao = false;
         }
     }

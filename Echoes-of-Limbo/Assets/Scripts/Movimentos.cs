@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,18 +9,19 @@ public class Player : MonoBehaviour
     public bool noChao = false;
     public bool andando = false;
 
-    private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
-    private Animator _animator;
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private Animator anim;
 
     private bool atacando = false;
     private bool curando = false;
+    private bool morto = false;
 
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -36,10 +38,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (morto) return; // trava tudo quando morre
+
         andando = false;
 
-        
-        if (!atacando)
+        if (!atacando && !curando)
         {
             Movimento();
             Pulo();
@@ -48,22 +51,19 @@ public class Player : MonoBehaviour
         Ataque();
         Cura();
 
-        _animator.SetBool("Andando", andando);
-        _animator.SetBool("Pulando", !noChao);
+        anim.SetBool("Andando", andando);
+        anim.SetBool("Pulando", !noChao);
     }
 
     void Movimento()
     {
         float move = Input.GetAxisRaw("Horizontal");
 
-        _rigidbody2D.linearVelocity = new Vector2(
-            move * velocidade,
-            _rigidbody2D.linearVelocity.y
-        );
+        rb.linearVelocity = new Vector2(move * velocidade, rb.linearVelocity.y);
 
         if (move != 0)
         {
-            _spriteRenderer.flipX = move < 0;
+            sr.flipX = move < 0;
             if (noChao) andando = true;
         }
     }
@@ -72,10 +72,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
         {
-            _rigidbody2D.AddForce(
-                Vector2.up * forcaPulo,
-                ForceMode2D.Impulse
-            );
+            rb.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
+            noChao = false;
         }
     }
 
@@ -84,7 +82,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && !atacando && noChao)
         {
             atacando = true;
-            _animator.SetTrigger("Atacar");
+            anim.SetTrigger("Atacar");
         }
     }
 
@@ -93,20 +91,26 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !curando)
         {
             curando = true;
-            _animator.SetTrigger("Curar");
-
-            
-            Invoke(nameof(FimCura), 1.2f);
+            anim.SetTrigger("Curar");
         }
     }
 
-    public void FimAtaque()
+    public void FimAtaque() => atacando = false;
+    public void FimCura() => curando = false;
+
+    
+    public void Morrer()
     {
-        atacando = false;
+        if (morto) return;
+
+        morto = true;
+        rb.linearVelocity = Vector2.zero;
+        anim.SetTrigger("Morrer");
     }
 
-    public void FimCura()
+    
+    public void ReiniciarFase()
     {
-        curando = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

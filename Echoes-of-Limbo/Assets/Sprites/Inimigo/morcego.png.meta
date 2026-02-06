@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3981a8f29b55e5540a9a3c9bc88fb604
+guid: fdd7d36d6bbb7d64b831735383c2baaa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4448715427215634006
-    second: ghost_0
+      213: -3606365097131015313
+    second: morcego_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ghost_0
+      name: morcego_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 76
-        width: 195
-        height: 225
+        x: 19
+        y: 43
+        width: 126
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65eecf95c130dbd30800000000000000
-      internalID: 4448715427215634006
+      spriteID: f63832f2d0e93fdc0800000000000000
+      internalID: -3606365097131015313
       vertices: []
       indices: 
       edges: []

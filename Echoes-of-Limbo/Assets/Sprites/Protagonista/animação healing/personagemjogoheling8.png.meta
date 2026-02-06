@@ -1,52 +1,31 @@
 fileFormatVersion: 2
-guid: 4226c692e3d48284ea0ba2ca591f12dd
+guid: 9689ea956b6b7374cbfeb59e58a417d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -95713126678802229
-    second: personagemjogocura4_0
+      213: -5454475666496616459
+    second: personagemjogoheling8_0
   - first:
-      213: -6367908540832565156
-    second: personagemjogocura4_1
+      213: -7739031069532087111
+    second: personagemjogoheling8_1
   - first:
-      213: 3114671993296719952
-    second: personagemjogocura4_2
+      213: 7351019255911430293
+    second: personagemjogoheling8_2
   - first:
-      213: -5250828319662619469
-    second: personagemjogocura4_3
+      213: 241780772535780025
+    second: personagemjogoheling8_3
   - first:
-      213: 760530501875403574
-    second: personagemjogocura4_4
+      213: 2726407047405525045
+    second: personagemjogoheling8_4
   - first:
-      213: -6604208874427420187
-    second: personagemjogocura4_5
+      213: -5613248759901566788
+    second: personagemjogoheling8_5
   - first:
-      213: 1506415904568352299
-    second: personagemjogocura4_6
+      213: 7502635391790457077
+    second: personagemjogoheling8_6
   - first:
-      213: -1569270514295994238
-    second: personagemjogocura4_7
-  - first:
-      213: -1490003617842178847
-    second: personagemjogocura4_8
-  - first:
-      213: 6093466024553773575
-    second: personagemjogocura4_9
-  - first:
-      213: 5923719790393283213
-    second: personagemjogocura4_10
-  - first:
-      213: 5035611918036220403
-    second: personagemjogocura4_11
-  - first:
-      213: -2904657104071801028
-    second: personagemjogocura4_12
-  - first:
-      213: -5240245096686600380
-    second: personagemjogocura4_13
-  - first:
-      213: -1974575813200511300
-    second: personagemjogocura4_14
+      213: 4221481013652859540
+    second: personagemjogoheling8_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -168,57 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: personagemjogocura4_0
+      name: personagemjogoheling8_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 204
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc0d7fb1b65fbaef0800000000000000
-      internalID: -95713126678802229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_1
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 169
-        width: 27
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c58bf75bbe4a0a7a0800000000000000
-      internalID: -6367908540832565156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_2
-      rect:
-        serializedVersion: 2
-        x: 104
+        x: 19
         y: 174
-        width: 27
-        height: 27
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0501f48fca9893b20800000000000000
-      internalID: 3114671993296719952
+      spriteID: 5f70576c74fcd44b0800000000000000
+      internalID: -5454475666496616459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_3
+      name: personagemjogoheling8_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 159
-        width: 7
-        height: 7
+        x: 29
+        y: 14
+        width: 77
+        height: 197
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b4c2fd967f4127b0800000000000000
-      internalID: -5250828319662619469
+      spriteID: 9bc14d2de30799490800000000000000
+      internalID: -7739031069532087111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_4
+      name: personagemjogoheling8_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 159
-        width: 7
-        height: 7
+        x: 109
+        y: 179
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63b02254672fd8a00800000000000000
-      internalID: 760530501875403574
+      spriteID: 59838add011140660800000000000000
+      internalID: 7351019255911430293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_5
+      name: personagemjogoheling8_3
       rect:
         serializedVersion: 2
         x: 9
@@ -293,58 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e17541f4032954a0800000000000000
-      internalID: -6604208874427420187
+      spriteID: 9b2c384e45afa5300800000000000000
+      internalID: 241780772535780025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_6
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 114
-        width: 27
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2e9bcba84dd7e410800000000000000
-      internalID: 1506415904568352299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_7
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 134
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 28884e618c4d83ae0800000000000000
-      internalID: -1569270514295994238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_8
+      name: personagemjogoheling8_4
       rect:
         serializedVersion: 2
         x: 134
@@ -359,39 +250,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e4587c9a91725be0800000000000000
-      internalID: -1490003617842178847
+      spriteID: 5385ab5b3c426d520800000000000000
+      internalID: 2726407047405525045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_9
+      name: personagemjogoheling8_5
       rect:
         serializedVersion: 2
-        x: 49
-        y: 89
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70a70749017509450800000000000000
-      internalID: 6093466024553773575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_10
-      rect:
-        serializedVersion: 2
-        x: 84
+        x: 119
         y: 84
         width: 7
         height: 7
@@ -403,20 +272,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d82d75f93c7453250800000000000000
-      internalID: 5923719790393283213
+      spriteID: cb84a2e3efbb912b0800000000000000
+      internalID: -5613248759901566788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_11
+      name: personagemjogoheling8_6
       rect:
         serializedVersion: 2
-        x: 109
-        y: 74
-        width: 27
-        height: 27
+        x: 19
+        y: 64
+        width: 17
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,58 +294,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f9b5411c5612e540800000000000000
-      internalID: 5035611918036220403
+      spriteID: 5f0a1fe5327be1860800000000000000
+      internalID: 7502635391790457077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personagemjogocura4_12
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 59
-        width: 27
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c374c7dd0c590b7d0800000000000000
-      internalID: -2904657104071801028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_13
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 39
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44f330c39d8e647b0800000000000000
-      internalID: -5240245096686600380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: personagemjogocura4_14
+      name: personagemjogoheling8_7
       rect:
         serializedVersion: 2
         x: 124
@@ -491,8 +316,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbefa1872c5e894e0800000000000000
-      internalID: -1974575813200511300
+      spriteID: 49aa5d49d96b59a30800000000000000
+      internalID: 4221481013652859540
       vertices: []
       indices: 
       edges: []

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -40,7 +38,8 @@ public class Player : MonoBehaviour
     {
         andando = false;
 
-        if (!atacando && !curando)
+        
+        if (!atacando)
         {
             Movimento();
             Pulo();
@@ -65,9 +64,7 @@ public class Player : MonoBehaviour
         if (move != 0)
         {
             _spriteRenderer.flipX = move < 0;
-
-            if (noChao)
-                andando = true;
+            if (noChao) andando = true;
         }
     }
 
@@ -79,8 +76,6 @@ public class Player : MonoBehaviour
                 Vector2.up * forcaPulo,
                 ForceMode2D.Impulse
             );
-
-            noChao = false;
         }
     }
 
@@ -99,6 +94,9 @@ public class Player : MonoBehaviour
         {
             curando = true;
             _animator.SetTrigger("Curar");
+
+            
+            Invoke(nameof(FimCura), 1.2f);
         }
     }
 

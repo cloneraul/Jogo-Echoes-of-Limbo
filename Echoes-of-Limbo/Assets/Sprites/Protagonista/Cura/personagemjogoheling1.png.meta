@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      personagemjogoheling1_0: 9205596100071908358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

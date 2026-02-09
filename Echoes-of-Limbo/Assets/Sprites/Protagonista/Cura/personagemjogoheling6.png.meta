@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      personagemjogoheling6_0: -851362849722715676
+      personagemjogoheling6_1: -1526416062340584237
+      personagemjogoheling6_2: -9083100933573568430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

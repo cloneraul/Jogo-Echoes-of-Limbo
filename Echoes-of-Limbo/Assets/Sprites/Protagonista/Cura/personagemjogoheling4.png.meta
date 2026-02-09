@@ -260,7 +260,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      personagemjogoheling4_0: 3211689380912902091
+      personagemjogoheling4_1: -6975641221112243928
+      personagemjogoheling4_2: -9166547076043198248
+      personagemjogoheling4_3: -4641512553086951783
+      personagemjogoheling4_4: -2882015449341209187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

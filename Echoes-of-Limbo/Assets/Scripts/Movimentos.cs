@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private bool curando = false;
     private bool morto = false;
 
+    public float tempoCura = 1f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,7 +40,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (morto) return; // trava tudo quando morre
+        // ✅ Reset com tecla R
+        if (Input.GetKeyDown(KeyCode.R))
+            ReiniciarFase();
+
+        // ✅ se morreu, não aceita mais controle
+        if (morto)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
 
         andando = false;
 
@@ -46,6 +57,10 @@ public class Player : MonoBehaviour
         {
             Movimento();
             Pulo();
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
 
         Ataque();
@@ -79,7 +94,7 @@ public class Player : MonoBehaviour
 
     void Ataque()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !atacando && noChao)
+        if (Input.GetKeyDown(KeyCode.Z) && !atacando && !curando && noChao)
         {
             atacando = true;
             anim.SetTrigger("Atacar");
@@ -88,27 +103,39 @@ public class Player : MonoBehaviour
 
     void Cura()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !curando)
+        if (Input.GetKeyDown(KeyCode.E) && !curando && !atacando && noChao)
         {
             curando = true;
-            anim.SetTrigger("Curar");
+            anim.SetBool("Curando", true);
+
+            CancelInvoke(nameof(FimCura));
+            Invoke(nameof(FimCura), tempoCura);
         }
     }
 
-    public void FimAtaque() => atacando = false;
-    public void FimCura() => curando = false;
+    public void FimAtaque()
+    {
+        atacando = false;
+    }
 
-    
+    public void FimCura()
+    {
+        curando = false;
+        anim.SetBool("Curando", false);
+    }
+
     public void Morrer()
     {
         if (morto) return;
 
         morto = true;
+        atacando = false;
+        curando = false;
+
         rb.linearVelocity = Vector2.zero;
         anim.SetTrigger("Morrer");
     }
 
-    
     public void ReiniciarFase()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

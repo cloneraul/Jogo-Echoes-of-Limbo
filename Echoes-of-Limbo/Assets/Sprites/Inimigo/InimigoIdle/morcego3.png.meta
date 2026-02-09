@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      morcego3_0: -2094121289216880797
+      morcego3_1: 6673859278539323854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
